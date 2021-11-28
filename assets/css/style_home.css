@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Monda;
+}
+body{
+    min-height: 100vh;
+    background: linear-gradient(to right, #fc5c7d, #6a82fb);
+    background-repeat: repeat-y;
+    color: #fff;
+}
+
+main{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 20px;
+    padding: 10px;
+}
+/* Header */
+header{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2em;
+}
+
+/* logo */
+img{
+    width: 120px;
+    margin: 20px 30px;
+    position: absolute;
+    top:1px;
+    left:1px;
+}
+
+/*logout*/
+.lgout{
+   position: absolute; 
+   top: 42px;
+   right: 10px;
+   margin: 30px;
+}
+.lg{
+    text-decoration: none;
+    color:#fff;
+    background:#08c751;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+a:hover{
+    opacity: 0.8;
+}
+
+/*profile*/
+.container{
+
+    display: grid;
+    grid-template-columns: 140px auto ;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    overflow: hidden;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    font-size: 1.2em;
+    top: 15%;
+}
+
+/*Footer*/
+footer{
+    text-align: center;
+    padding-top: 40px;
+}
+.footer_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footer_content h4{
+    font-size: 1.8em;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+    color: #fff;
+}
+.footer_content .social{
+    list-style: none;
+    display: flex;
+    margin: 1rem 0 3rem 0;
+}
+.footer_content .social li{
+    margin: 0 15px;
+}
+.footer_content .social li a{
+    color: #fff;
+}
+.footer_content .social li a i{
+    font-size: 1.6rem;
+    transition: color .4s ease;
+}
+.footer_content .social li a:hover i{
+    color: rgb(0, 162, 255);
+    font-size: 2.2rem;
+}
+.footer_bottom{
+    background: #000;
+    padding: 20px 0;
+    color:#fff;
+}
+.footer_bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: uppercase;  
+}

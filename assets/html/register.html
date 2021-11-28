@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Source Code - Registration Form</title>
+        <link rel="icon" type="image/x-icon" href="logo-black.png">
+        <link rel="stylesheet" href="style2.css">
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Monda">
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="region.js"></script>      
+        <script src="logic.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to Source Code!!</h1>
+            <P>Source Code helps to store your information and display it through signing in.<br>Come join the Source Code family!!</P>   
+        </header>
+        <img alt=logo src="logo-black.png" width="110vw">
+        <main>
+            <div class="container">
+                    <form action="details.php" method="post">
+                        <h2>Registration Form</h2>
+                        <div class="form1">
+                            <div class="ss"><h3>1</h3></div>
+                            <div class="pd">
+                                <fieldset>
+                                    <legend>Personal Details :</legend>
+                                    <!-- Name -->
+                                    <div class="in">
+                                        <label for="fname">First Name</label>
+                                        <input type="text" id="fname" name="firstname" placeholder="First Name" required>
+                                    </div>
+                                    <div class="in">
+                                        <label for="lname">Last Name</label>
+                                        <input type="text" id="lname" name="lastname" placeholder="Last Name" required>
+                                    </div>
+                                    <!-- DOB-->
+                                    <div class="in">
+                                        <label for="dob">Date of Birth</label>
+                                        <input type="date" id="dob" name="dob" value="dob" oninput="document.getElementById('age').value = CalculateAge();" required>
+                                    </div>
+                                    <!-- Age -->
+                                    <div class="in">
+                                        <label for="age">Age</label>
+                                        <input type="number" id="age" name="age" value="" placeholder="00" required>  
+                                    </div>
+                                    <!-- Gender -->
+                                    <div class="inn">
+                                        <label for="gender">Gender</label>
+                                        <input type="radio" id="gender" name="gender" value="Male" required>
+                                        <label for="Male">Male</label><br>
+                                        <input type="radio" id="gender1" name="gender" value="Female" required>
+                                        <label for="Female">Female</label><br>
+                                        <input type="radio" id="gender1" name="gender" value="Prefernottosay" required>
+                                        <label for="pnts">Prefer not to say</label>   
+                                    </div>
+                                </fieldset>
+                            </div> 
+                            <div class="address">
+                                <fieldset>
+                                    <legend>Address Details:</legend>
+                                    <!-- Address -->
+                                    <div class="in">
+                                        <div class="col-sm-4">
+                                            <label for="country">Country</label>
+                                            <select name="country" class="countries form-control" id="countryId">
+                                                <option value="">Select</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="in">
+                                        <div class="col-sm-4">
+                                            <label for="state">State</label>
+                                            <select name="state" class="states form-control" id="stateId">
+                                                <option value="">Select</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="in">
+                                        <div class="col-sm-4">
+                                            <label for="city">City</label>        
+                                            <select name="city" class="cities form-control" id="cityId">
+                                                <option value="">Select</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="in">
+                                            <label for="pincode">Pincode</label>
+                                            <input type="tel" maxlength="6" name="pincode" value="" id="pincode" placeholder="00-00-00">
+                                    </div>                      
+                                </fieldset>
+                            </div>
+                            <div class="education">
+                                <fieldset>
+                                    <legend>Education :</legend>
+                                    <!-- Education -->
+                                    <div class="in">
+                                        <label for="degree">Degree</label>
+                                        <select name="degree" id="degree">
+                                            <option value="">Select</option>
+                                            <option value="B.Tech">B.Tech</option>
+                                            <option value="B.E">B.E</option>
+                                            <option value="BCA">BCA</option>
+                                            <option value="B.Com">B.Com</option>
+                                            <option value="B.Sc">B.Sc</option>
+                                            <option value="M.Tech">M.Tech</option>
+                                            <option value="M.S">M.S</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="in">
+                                        <label for="college">College</label>
+                                        <input type="text" name="college" id="college" value="" placeholder="College name">
+                                    </div>     
+                                    <div class="in">      
+                                        <label for="cyear">Studying Year</label>
+                                        <select name="cyear" id="cyear">
+                                            <option value="">Select</option>
+                                            <option value="1st">1<sup>st</sup></option>
+                                            <option value="2nd">2<sup>nd</sup></option>
+                                            <option value="3rd">3<sup>rd</sup></option>
+                                            <option value="4th">4<sup>th</sup></option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="in">
+                                        <label for="passing">Passing Year</label>
+                                        <input type="month" name="passing" id="pyear">
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="contact">
+                                <fieldset>
+                                    <legend>Contact Details :</legend>
+                                    <!-- Phone NO.-->
+                                    <div class="in">
+                                        <label for="phoneno.">Phone No.</label>
+                                        <input type="tel" id="phoneno" name="phoneno" value="" placeholder="+91 00000-00000" maxlength="10">
+                                    </div>
+                                    <!-- email-id-->
+                                    <div class="in">
+                                        <label for="email">Email-id</label>
+                                        <input type="email" id="email" name="email" placeholder="@xyz.com" required>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="survey">
+                                <fieldset>              
+                                    <legend>Survey :</legend>
+                                    <!-- Survey--> 
+                                    <div class="inn">
+                                        <label for="survey">What are your interests?</label><br>
+                                        <input type="checkbox" name="survey" value="Web Development" id="survey">
+                                        <label for="survey1">Web Development</label><br>
+                                        <input type="checkbox" name="survey" value="App Development" id="survey">
+                                        <label for="survey2">App Development</label><br>
+                                        <input type="checkbox" name="survey" value="CP" id="survey">
+                                        <label for="survey2">Competative Programming</label><br>
+                                        <input type="checkbox" name="survey" value="Ds&algo" id="survey">
+                                        <label for="survey2">Data Structures & Algorithms</label><br>
+                                        <input type="checkbox" name="survey" value="Data Science" id="survey">
+                                        <label for="survey2">Data Science</label><br>
+                                        <input type="checkbox" name="survey" value="AI" id="survey">
+                                        <label for="survey2">Artificial Intelligence</label><br>
+                                        <input type="checkbox" name="survey" value="ML" id="survey">
+                                        <label for="survey2">Machine Learning</label><br>
+                                        <input type="checkbox" name="survey" value="Cyber Security" id="survey">
+                                        <label for="survey2">Cyber Security</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="survey2">
+                                <fieldset>
+                                    <legend>Questions :</legend>
+                                    <!-- Questions-->
+                                    <div class="inn"> 
+                                        <label for="questions">Anything you want to ask/comment?</label><br>
+                                        <textarea placeholder="Type here!!"></textarea>
+                                    </div>
+                            </div>    
+                        </div> 
+                        <div class="form1">
+                            <div class="gg">
+                                <div class="ss"><h3>2</h3></div>
+                                <div class="login">
+                                    <fieldset class="ll">
+                                        <!-- Login Details-->
+                                        <legend>Login Details :</legend>
+                                        <div class="in1">
+                                           <label for="username">Username</label>
+                                           <input type="text" name="username" value="" id="username" placeholder="username" required>
+                                        </div>
+                                        <div class="in1">
+                                           <label for="Password">Password</label>
+                                           <input type="password" name="password" value="" id="password" placeholder="password" required>
+                                        </div>
+                                        <div class="in1">
+                                            <label for="confirmPassword">Confirm Password</label>
+                                            <input type="password" name="cpass" value="" id="cpass" placeholder="password" required>   
+                                            <script src="logic.js"></script>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="lowers">
+                                    <div class="in3">
+                                        <input type="checkbox" name="newsletter" id="newsletter" value="newsletter">
+                                        <label for="newsletter">Subscribe to Our Newsletter</label>
+                                    </div>
+                                    <div class="in3">
+                                        <input type="checkbox" name="terms" id="terms" value="terms" required>
+                                        <label for="terms">I agree to <a href="#" onclick="document.getElementById('termspop').style.display='block'">terms&conditions</a></label>
+                                    </div>
+                                    <div class="button">
+                                        <button type="reset">Reset</button>
+                                        <button type="submit">Register</button>
+                                        <h4>Already a member? <a href="index.html">login </a>.</h4>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </form>
+                    <!-- Terms and Conditions-->
+                    <div class="termspop" id="termspop">
+                        <div class="termspop_content">    
+                            <h1> There are no Terms and Conditions you can Proceed further. </h1>
+                            <button value="close" class="close" onclick="document.getElementById('termspop').style.display='none'">Close</button>
+                        </div>
+                    </div>
+            </div>
+        </main>
+        <footer id="f">
+            <div class="footer_bottom">
+            <div class="footer_content">
+                <h4>Source Code</h4>
+                <ul class="social"> 
+                <li><a href="https://github.com/Siddhant-Patil0203" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/siddhant-patil-934113205/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/sidd.0203/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.facebook.com/siddhant.patil.792303/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            
+                <p>copyrights &copy;2021 SourceCode</p>
+            </div>
+        </footer>
+    </body>
+</html>
